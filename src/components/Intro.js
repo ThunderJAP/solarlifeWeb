@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../images/about1.png';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Intro = () => {
     return (
