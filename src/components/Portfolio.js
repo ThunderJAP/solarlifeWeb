@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import img from '../images/p1.png'; 
 
 const products = [
@@ -73,6 +73,7 @@ const products = [
 
 const Portfolio = () => {
   return (
+    
     <div className="my-4 py-4" id='portfolio'>
     <div className="min-h-screen bg-gray-50 p-8">
         <h2 className="my-2 text-center text-3xl text-green-600 uppercase font-bold">PRODUCT LIST</h2>
@@ -81,6 +82,7 @@ const Portfolio = () => {
                  </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {products.map((product) => (
+          <Link to={`/Portfolio/${product.id}`} key={product.id}>
           <div
             key={product.id}
             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
@@ -103,11 +105,13 @@ const Portfolio = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </div>    </Link>
+          
         ))}
       </div>
     </div>
     </div>
+
   );
 };
 
